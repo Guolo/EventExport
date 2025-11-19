@@ -110,7 +110,7 @@ label {
     font-weight: 500;
 }
 
-input[type="date"] {
+/*input[type="date"] {
     width: 100%;
     padding: 14px 16px;
     font-size: 15px;
@@ -123,14 +123,38 @@ input[type="date"] {
     outline: none;
 }
 
-/* Fix per iPhone - campo data troppo largo */
 @media (max-width: 480px) and (hover: none) and (pointer: coarse) {
   input[type="date"] {
     width: 92%;
     font-size: 14px;
     padding: 10px;
   }
+}*/
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  color: #1D1D1D;
+  background-color: #FFFFFF;
+  
+  /* FIX PER WEBKIT/iOS */
+  -webkit-appearance: none;  /* Rimuove lo stile nativo iOS */
+  -webkit-min-logical-width: calc(100% - 16px); /* Compensa l'icona dropdown */
+  min-height: 2.5rem;  /* Garantisce dimensioni toccabili su iOS */
 }
+
+/* Aggiungi l'icona calendario con CSS */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  width: 1.2em;
+  height: 1.2em;
+  opacity: 0.6;
+}
+
 
 
 input[type="date"]:hover {
