@@ -1,33 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Esporta eventi .ics → XLS</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<!-- jsPDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Parser</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Esporta Eventi</h1>
+            <h2>Google Calendar</h2>
+        </header>
 
-<h1>Esporta eventi da file .ics</h1>
-<p class="hint">Un Semplice sito dove esportare tutti gli eventi da Google Calendar per un dato giorno</p>
+        <div class="content">
+            <div class="form-group">
+                <label for="icsFile">File ICS</label>
+                <div class="file-drop-zone" id="dropZone">
+                    <input type="file" id="icsFile" accept=".ics">
+                    <div class="file-drop-text">
+                        <strong>Seleziona un file</strong> o trascinalo qui
+                    </div>
+                    <div class="file-name" id="fileName" style="display: none;"></div>
+                </div>
+            </div>
 
-<label>File .ics:
-  <input id="icsFile" type="file" accept=".ics" />
-</label>
+            <div class="form-group">
+                <label for="dateInput">Data</label>
+                <input type="date" id="dateInput">
+            </div>
 
-<label>Giorno da esportare:
-  <input id="dateInput" type="date" />
-</label>
+            <button class="btn" id="goBtn">Scarica Excel</button>
 
-<button id="go">Genera XLS</button>
+            <div id="feedbackArea"></div>
 
-<script src="js/script.js"></script>
+            <div class="hint">
+                Carica un file .ics e seleziona una data per estrarre gli eventi corrispondenti in formato Excel
+                <br>Se non sai come esportare il file .ics, clicca qui
+            </div>
+            <div class="signature">
+                Alberto Guolo
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
