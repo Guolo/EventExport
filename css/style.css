@@ -1,0 +1,24 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+button {
+  margin-top: 14px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hint {
+  color: #555;
+  font-size: 0.9rem;
+}
