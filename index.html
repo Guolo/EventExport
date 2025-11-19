@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Esporta eventi .ics → PDF</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+<h1>Esporta eventi da file .ics</h1>
+<p class="hint">Un Semplice sito dove esportare tutti gli eventi da Google Calendar per un dato giorno</p>
+
+<label>File .ics:
+  <input id="icsFile" type="file" accept=".ics" />
+</label>
+
+<label>Giorno da esportare:
+  <input id="dateInput" type="date" />
+</label>
+
+<button id="go">Genera PDF</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
