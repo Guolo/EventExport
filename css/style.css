@@ -126,7 +126,7 @@ input[type="date"] {
 /* Fix per iPhone - campo data troppo largo */
 @media (max-width: 480px) and (hover: none) and (pointer: coarse) {
   input[type="date"] {
-    width: 90%;
+    width: 92%;
     font-size: 14px;
     padding: 10px;
   }
